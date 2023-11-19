@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repository Page Clone</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header style="display: flex; justify-content: center; align-items: center;">
+        <img src="git icon 2.png" alt="GitHub Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+        <h1 style="margin: 0;">GitHub Repository Page Clone</h1>
+    </header>
+    <div id="main-container">
+        <div id="left-container">
+            <img src="git icon.png" alt="User Image" class="user-image">
+            <div class="user-auth">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button id="loginBtn" onclick="login()">Login</button>
+                <div class="logged-in" id="loggedInContainer">
+                    <p id="loggedInUsername"></p>
+                    <button id="logoutBtn" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+        <div id="right-container">
+            <div class="filter-container">
+                <label for="language-filter">Filter by Language:</label>
+                <select id="language-filter">
+                    <option value="">All</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                </select>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="repo-search" placeholder="Find a repository..." oninput="searchRepositories()">
+            </div>
+            <div id="repositories"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
